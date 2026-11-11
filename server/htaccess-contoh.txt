@@ -1,0 +1,7 @@
+# Simpan sebagai ".htaccess" di folder website (Apache) agar file catatan ILOK tidak bisa diunduh orang lain.
+<FilesMatch "^ilok_.*\.(json|txt)$">
+    Require all denied
+</FilesMatch>
+
+# Nginx: tambahkan di konfigurasi server
+#   location ~ ^/ilok_.*\.(json|txt)$ { deny all; }
