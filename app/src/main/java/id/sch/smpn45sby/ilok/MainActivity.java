@@ -143,6 +143,13 @@ public class MainActivity extends Activity {
         findViewById(R.id.btnRetry).setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) { retryLoad(); }
         });
+        // Tombol "Muat ulang" di bilah atas: memuat ulang halaman ujian (sesi tetap, tidak keluar dari ujian).
+        findViewById(R.id.btnRefresh).setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                refreshUa();
+                retryLoad();
+            }
+        });
         btnUnlock.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) { submitPin(); }
         });
@@ -583,6 +590,9 @@ public class MainActivity extends Activity {
 
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                // Isi iframe (Google Form, Drive, Microsoft Forms) dibiarkan; domain yang boleh
+                // ditampilkan sudah dibatasi oleh website. Pembatasan domain hanya untuk halaman utama.
+                if (!request.isForMainFrame()) return false;
                 return !allow(request.getUrl());
             }
 
