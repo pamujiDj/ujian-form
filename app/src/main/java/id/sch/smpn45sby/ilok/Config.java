@@ -18,7 +18,7 @@ final class Config {
     };
 
     /** PIN pengawas untuk membuka kunci / keluar dari ujian. GANTI SEBELUM DIPAKAI! */
-    static final String PROCTOR_PIN = "450945";
+    static final String PROCTOR_PIN = "454545";
 
     /**
      * KUNCI RAHASIA untuk tanda pengenal aplikasi (dikirim ke server lewat User-Agent).
