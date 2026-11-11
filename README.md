@@ -1,19 +1,3 @@
-# IKHLAS LOCK (ILOK) v1.1
-
-Aplikasi Android ringan (tanpa library tambahan, Android 5.0+) untuk membuka **https://sas.smpnegeri45sby.sch.id**
-(CBT-SPENNEMA) dengan fitur anti-curang.
-
-> Package baru `id.sch.smpn45sby.ilok` → terpasang sebagai aplikasi BARU. Hapus aplikasi lama (eXam Secure) dari HP.
-
-## Membuat APK
-**A. GitHub Actions (tanpa install apa pun):** upload isi folder ke repository GitHub → tab *Actions → Build APK → Run workflow*
-→ unduh `ILOK-APK` dari *Artifacts* → pasang `app-debug.apk`.
-**B. Android Studio:** Open folder ini → *Build → Build APK(s)*.
-
-## WAJIB diganti sebelum dipakai (`Config.java`)
-- `PROCTOR_PIN` — PIN pengawas
-- `SECRET` — kunci rahasia (samakan dengan `server/ilok_guard.php`)
-
 ## Fitur
 - Blokir screenshot / rekam layar; layar WAJIB disematkan (isi ujian ditutup jika tidak); melepas sematan = ujian langsung terkunci; Back dinonaktifkan; layar penuh & selalu menyala
 - Deteksi: keluar aplikasi, panel notifikasi, split screen, layar eksternal/mirroring, aplikasi ditutup paksa
